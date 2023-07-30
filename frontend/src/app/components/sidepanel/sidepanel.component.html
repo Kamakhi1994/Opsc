@@ -1,8 +1,16 @@
-<div>
+<div class="leftpanel">
     <ul>
-        <li>
-            
+        <li class="leftpanel" *ngFor="let content of left_panel">
+            <a routerLink=" ">{{content.content_name}}</a>        
         </li>
+       
     </ul>
+</div>
+<div class="rightpanel">
+<ul>
+    <li class="rightpanel" *ngFor="let content of right_panel">
+        <a routerLink=" ">{{content.content_name}}</a>
+    </li>
+</ul>    
 </div>
 

@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { PanelService } from 'src/app/services/panel.service';
+import { panel } from '../model/panel.model';
 
 @Component({
   selector: 'app-sidepanel',
@@ -6,10 +9,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidepanel.component.css']
 })
 export class SidepanelComponent {
+  left_panel: panel[] = [];
+  right_panel: panel[] = [];
+constructor(private http:HttpClient,private panelservice:PanelService)
+{
+  this.panelservice.Left_panel_data().subscribe((params)=>
+  {this.left_panel=params});
 
-   Left_sidepanel_Data={content1:"Vision and Mission",content2:"Role and Function",
-   content3:"Organisation and History",content4:""
-
-  }
+  this.panelservice.Right_panel_data().subscribe((params)=>
+  {this.right_panel=params})}
 
 }
+

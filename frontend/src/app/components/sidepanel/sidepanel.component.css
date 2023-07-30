@@ -1,0 +1,53 @@
+.leftpanel{
+    float: left;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 100%;
+    
+}
+.leftpanel li{
+    color: blue;
+}
+.leftpanel a:hover{
+    cursor: pointer;
+}
+.leftpanel a{
+    display: inline-block;
+    border: 1px solid blue;
+    padding: 0.5rem;
+    justify-content: left;
+    width: 14rem;
+    font-size: 20px;
+    color: black;
+    background-color:white;
+}
+
+
+.rightpanel{
+    display: inline;
+    float: right;
+    margin-top: 0%;
+    margin-right: 2%;
+    margin-left: 50%;
+   
+}
+.rightpanel a{
+    float: right;
+    display:block;
+    flex-direction: column;
+    border: 1px solid blue;
+    padding: 0.5rem;
+    justify-content: left;
+    width: 14rem;
+    font-size: 20px;
+    color: black;
+    background-color:white;
+}
+
+.rightpanel a:hover{
+    cursor: pointer;
+}
+
+div{
+    position: absolute;
+}
